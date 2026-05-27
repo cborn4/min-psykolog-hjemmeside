@@ -454,6 +454,75 @@ section.alt { background: var(--cream-soft); }
 }
 
 /* ------------------------------------------------------------
+   Info-bokse
+   ------------------------------------------------------------ */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.info-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.6rem 1.6rem 1.4rem;
+    border-top: 3px solid var(--green-soft);
+}
+.info-box h3 {
+    font-family: var(--font-serif);
+    color: var(--green-deep);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 1rem;
+    padding-bottom: .7rem;
+    border-bottom: 1px solid var(--line);
+}
+.info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+}
+.info-list li {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+.info-list .info-key {
+    font-size: .76rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+}
+.info-list .info-val {
+    color: var(--ink);
+}
+.info-list--simple li {
+    color: var(--ink);
+    padding-left: 1rem;
+    position: relative;
+}
+.info-list--simple li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .65em;
+    width: 6px;
+    height: 1px;
+    background: var(--sand);
+}
+@media (min-width: 800px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+    }
+}
+
+/* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
 .btn {
