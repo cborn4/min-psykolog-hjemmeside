@@ -13,6 +13,33 @@
         });
     }
 
+    function updateMeta(lang) {
+        const titleEl = document.querySelector('title');
+        if (titleEl) {
+            const t = titleEl.getAttribute('data-title-' + lang);
+            if (t) titleEl.textContent = t;
+        }
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc) {
+            const d = desc.getAttribute('data-desc-' + lang);
+            if (d) desc.setAttribute('content', d);
+        }
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) {
+            const v = ogTitle.getAttribute('data-og-title-' + lang);
+            if (v) ogTitle.setAttribute('content', v);
+        }
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) {
+            const v = ogDesc.getAttribute('data-og-desc-' + lang);
+            if (v) ogDesc.setAttribute('content', v);
+        }
+        const ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogLocale) {
+            ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'da_DK');
+        }
+    }
+
     function setLang(lang) {
         body.classList.remove('lang-da', 'lang-en');
         body.classList.add('lang-' + lang);
@@ -23,6 +50,7 @@
             b.setAttribute('aria-pressed', active ? 'true' : 'false');
         });
         updatePlaceholders(lang);
+        updateMeta(lang);
         try { localStorage.setItem('site-lang', lang); } catch (e) {}
     }
 
