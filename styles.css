@@ -103,16 +103,14 @@ body.lang-en [data-block].lang-da { display: none !important; }
     color: var(--green-deep);
 }
 .brand-logo {
-    display: inline-block;
-    width: 34px;
-    height: 34px;
-    background-color: var(--green);
-    -webkit-mask: url('images/logo.svg') no-repeat center;
-            mask: url('images/logo.svg') no-repeat center;
-    -webkit-mask-size: contain;
-            mask-size: contain;
+    display: block;
+    width: 42px;
+    height: 42px;
+    fill: var(--green-deep);
     flex-shrink: 0;
+    transition: fill .2s ease;
 }
+.brand:hover .brand-logo { fill: var(--green); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name {
     font-family: var(--font-serif);
@@ -642,10 +640,11 @@ section.alt { background: var(--cream-soft); }
     gap: .8rem;
 }
 .footer-logo {
-    background-color: var(--cream);
-    width: 30px;
-    height: 30px;
+    fill: var(--cream-soft);
+    width: 34px;
+    height: 34px;
 }
+.footer-brand:hover .footer-logo { fill: var(--white); }
 .footer-name {
     margin: 0;
     font-family: var(--font-serif);
