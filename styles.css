@@ -338,6 +338,26 @@ section.alt { background: var(--cream-soft); }
 }
 
 /* ------------------------------------------------------------
+   Tilgang / Approach
+   ------------------------------------------------------------ */
+.approach-grid {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.approach .lead {
+    font-family: var(--font-serif);
+    font-size: clamp(1.25rem, 2.4vw, 1.55rem);
+    line-height: 1.45;
+    color: var(--green-deep);
+    margin-bottom: 1.4rem;
+    font-weight: 500;
+}
+.approach strong {
+    color: var(--green-deep);
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
 .btn {
