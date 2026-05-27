@@ -410,6 +410,50 @@ section.alt { background: var(--cream-soft); }
 }
 
 /* ------------------------------------------------------------
+   Priser / Prices
+   ------------------------------------------------------------ */
+.price-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.4rem 1.6rem;
+}
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+}
+.price-row:last-child { border-bottom: none; }
+.price-row h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--green-deep);
+    margin: 0 0 .2rem;
+    font-weight: 500;
+}
+.price-meta {
+    margin: 0;
+    color: var(--muted);
+    font-size: .92rem;
+}
+.price-value {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--green-deep);
+    font-weight: 500;
+    white-space: nowrap;
+    padding-top: .15rem;
+}
+.price-row--discount .price-value {
+    color: var(--green-soft);
+}
+
+/* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
 .btn {
