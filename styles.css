@@ -523,6 +523,105 @@ section.alt { background: var(--cream-soft); }
 }
 
 /* ------------------------------------------------------------
+   Kontaktformular
+   ------------------------------------------------------------ */
+.contact-intro {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--ink);
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-style: italic;
+}
+.contact-form {
+    max-width: 620px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.75rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.field { display: flex; flex-direction: column; gap: .35rem; }
+.field label {
+    font-size: .82rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--green-soft);
+}
+.field .optional {
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--muted);
+    font-size: .82rem;
+    font-style: italic;
+}
+.field input,
+.field textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: .75rem .9rem;
+    transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.field textarea { resize: vertical; min-height: 120px; }
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--green-soft);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(111, 128, 115, 0.18);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: #a8a89e; }
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: flex-start;
+    margin-top: .5rem;
+}
+.form-note {
+    font-size: .9rem;
+    color: var(--muted);
+    margin: 0;
+}
+.form-status {
+    min-height: 1.5em;
+    font-size: .95rem;
+}
+.form-status.success {
+    color: var(--green-deep);
+    background: #e6efe5;
+    border: 1px solid #c4d5c1;
+    border-radius: var(--radius);
+    padding: .8rem 1rem;
+}
+.form-status.error {
+    color: #8a3a3a;
+    background: #f6e3e0;
+    border: 1px solid #e2b9b3;
+    border-radius: var(--radius);
+    padding: .8rem 1rem;
+}
+@media (min-width: 800px) {
+    .contact-form { padding: 2.2rem 2rem; }
+    .form-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+}
+
+/* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
 .btn {

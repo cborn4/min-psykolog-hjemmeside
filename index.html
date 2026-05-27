@@ -326,6 +326,86 @@
                 </div>
             </div>
         </section>
+
+        <!-- ============= KONTAKT ============= -->
+        <section id="kontakt" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">
+                        <span class="lang-da">Kontakt</span>
+                        <span class="lang-en">Contact</span>
+                    </span>
+                    <h2 id="contact-title">
+                        <span class="lang-da">Skriv til mig</span>
+                        <span class="lang-en">Send me a message</span>
+                    </h2>
+                    <div class="divider"></div>
+                </div>
+
+                <p class="contact-intro">
+                    <span class="lang-da">Vil du høre mere eller booke en samtale? Skriv et par ord, så vender jeg tilbage så hurtigt jeg kan.</span>
+                    <span class="lang-en">Want to hear more or book a session? Send a short note and I'll get back to you as soon as I can.</span>
+                </p>
+
+                <form class="contact-form" action="https://formspree.io/f/mjgzjyyj" method="POST" novalidate>
+                    <div class="field">
+                        <label for="name">
+                            <span class="lang-da">Navn</span>
+                            <span class="lang-en">Name</span>
+                        </label>
+                        <input type="text" id="name" name="name" required
+                               data-placeholder-da="Dit navn"
+                               data-placeholder-en="Your name">
+                    </div>
+
+                    <div class="field">
+                        <label for="email">
+                            <span class="lang-da">E-mail</span>
+                            <span class="lang-en">Email</span>
+                        </label>
+                        <input type="email" id="email" name="email" required
+                               data-placeholder-da="din@email.dk"
+                               data-placeholder-en="your@email.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">
+                            <span class="lang-da">Telefon <span class="optional">(valgfrit)</span></span>
+                            <span class="lang-en">Phone <span class="optional">(optional)</span></span>
+                        </label>
+                        <input type="tel" id="phone" name="phone"
+                               data-placeholder-da="+45 12 34 45 78"
+                               data-placeholder-en="+45 12 34 45 78">
+                    </div>
+
+                    <div class="field">
+                        <label for="message">
+                            <span class="lang-da">Besked</span>
+                            <span class="lang-en">Message</span>
+                        </label>
+                        <textarea id="message" name="message" rows="6" required
+                                  data-placeholder-da="En kort besked, undgå personfølsomme oplysninger"
+                                  data-placeholder-en="A short message — please avoid sensitive personal information"></textarea>
+                    </div>
+
+                    <!-- Honeypot anti-spam felt -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;">
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn">
+                            <span class="lang-da">Send besked</span>
+                            <span class="lang-en">Send message</span>
+                        </button>
+                        <p class="form-note">
+                            <span class="lang-da">Eller skriv direkte til <a href="mailto:psykolog.claus.bornemann@protonmail.com">psykolog.claus.bornemann@protonmail.com</a></span>
+                            <span class="lang-en">Or write directly to <a href="mailto:psykolog.claus.bornemann@protonmail.com">psykolog.claus.bornemann@protonmail.com</a></span>
+                        </p>
+                    </div>
+
+                    <div class="form-status" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
