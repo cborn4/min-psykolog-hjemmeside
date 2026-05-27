@@ -358,6 +358,58 @@ section.alt { background: var(--cream-soft); }
 }
 
 /* ------------------------------------------------------------
+   Citater / Quotes
+   ------------------------------------------------------------ */
+.quote-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 880px;
+    margin-inline: auto;
+}
+.quote-list blockquote {
+    margin: 0;
+    padding: 1.8rem 1.6rem 1.8rem 2.4rem;
+    background: var(--white);
+    border-left: 3px solid var(--sand);
+    border-radius: var(--radius);
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+.quote-list blockquote::before {
+    content: '\201C';
+    position: absolute;
+    top: .2rem;
+    left: .8rem;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--beige-warm);
+}
+.quote-list p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--green-deep);
+    margin: 0;
+}
+@media (min-width: 800px) {
+    .quote-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    .quote-list li:nth-child(5) {
+        grid-column: 1 / -1;
+        max-width: 720px;
+        margin-inline: auto;
+    }
+}
+
+/* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
 .btn {
