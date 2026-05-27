@@ -297,6 +297,45 @@ section.alt { background: var(--cream-soft); }
     background: var(--sand);
     margin: 1rem auto 0;
 }
+.section-title--left { text-align: left; margin-bottom: 1.5rem; }
+.section-title--left .divider { margin-left: 0; }
+
+/* ------------------------------------------------------------
+   Om Claus
+   ------------------------------------------------------------ */
+.about { background: var(--cream-soft); }
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+.about-portrait {
+    margin: 0 auto;
+    width: clamp(180px, 55vw, 280px);
+}
+.about-portrait img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    border: 4px solid var(--white);
+}
+.about-text p {
+    color: var(--ink);
+}
+@media (min-width: 800px) {
+    .about-grid {
+        grid-template-columns: 280px 1fr;
+        gap: 3.5rem;
+    }
+    .about-portrait {
+        margin: 0;
+        position: sticky;
+        top: 100px;
+    }
+}
 
 /* ------------------------------------------------------------
    Buttons
