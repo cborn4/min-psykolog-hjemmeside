@@ -210,17 +210,20 @@ body.lang-en [data-block].lang-da { display: none !important; }
     display: flex;
     align-items: center;
     color: var(--cream-soft);
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     padding: clamp(4rem, 10vw, 7rem) 0;
 }
+/* <img> bevares for SEO/skærmlæsere men er visuelt skjult (background-image driver visningen). */
 .hero-image {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
 }
 .hero-overlay {
     position: absolute;
