@@ -338,6 +338,23 @@ section.alt { background: var(--cream-soft); }
 /* ------------------------------------------------------------
    Tilgang / Approach
    ------------------------------------------------------------ */
+.approach-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+.approach-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.approach-logo svg {
+    width: clamp(220px, 60vw, 340px);
+    height: auto;
+    fill: var(--green-soft);
+    display: block;
+}
 .approach-grid {
     max-width: 720px;
     margin: 0 auto;
@@ -353,6 +370,18 @@ section.alt { background: var(--cream-soft); }
 .approach strong {
     color: var(--green-deep);
     font-weight: 500;
+}
+@media (min-width: 800px) {
+    .approach-layout {
+        grid-template-columns: minmax(280px, 1fr) minmax(0, 1.4fr);
+        gap: 4rem;
+        align-items: center;
+    }
+    .approach-logo svg {
+        width: 100%;
+        max-width: 420px;
+    }
+    .approach-grid { margin: 0; }
 }
 
 /* ------------------------------------------------------------
