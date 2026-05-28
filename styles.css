@@ -437,6 +437,12 @@ section.alt { background: var(--cream-soft); }
     .quote-list {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        align-items: start;
+    }
+    .quote-list li {
+        grid-column: auto;
+        max-width: none;
+        margin-inline: 0;
     }
 }
 
