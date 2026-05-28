@@ -438,11 +438,6 @@ section.alt { background: var(--cream-soft); }
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-    .quote-list li:nth-child(5) {
-        grid-column: 1 / -1;
-        max-width: 720px;
-        margin-inline: auto;
-    }
 }
 
 /* ------------------------------------------------------------
